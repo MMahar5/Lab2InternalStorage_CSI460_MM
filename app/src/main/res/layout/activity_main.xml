@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#a09484"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:fontFamily="@font/architects_daughter"
+        android:text="TO DO LIST"
+        android:textColor="#333333"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/addItemTxt"
+        android:layout_width="271dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="512dp"
+        android:backgroundTint="#333333"
+        android:fontFamily="@font/assistant"
+        android:hint="Enter a New To-Do Item"
+        android:textColorHint="#333333"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/addItemBtn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/addItemBtn"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="292dp"
+        android:layout_marginBottom="512dp"
+        android:backgroundTint="@color/dark_gray"
+        android:fontFamily="@font/walter_turncoat"
+        android:padding="4dp"
+        android:text="Add To List"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:cornerRadius="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#444444"
+        app:strokeWidth="1.5dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rclView"
+        android:layout_width="356dp"
+        android:layout_height="212dp"
+        android:layout_marginTop="256dp"
+        android:background="@drawable/rcl_view_border"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/showListBtn"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/dark_gray"
+        android:fontFamily="@font/walter_turncoat"
+        android:padding="4dp"
+        android:text="See All Items"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:cornerRadius="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.165"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rclView"
+        app:strokeColor="#444444"
+        app:strokeWidth="1.5dp" />
+
+    <Button
+        android:id="@+id/deleteBtn"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/dark_gray"
+        android:fontFamily="@font/walter_turncoat"
+        android:padding="4dp"
+        android:text="Remove All Items"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:cornerRadius="4dp"
+        app:layout_constraintStart_toEndOf="@+id/showListBtn"
+        app:layout_constraintTop_toBottomOf="@+id/rclView"
+        app:strokeColor="#444444"
+        app:strokeWidth="1.5dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
